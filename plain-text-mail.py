@@ -7,12 +7,12 @@ load_dotenv()
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-USERNAME = "sadiqueiqbal28@gmail.com"
+USERNAME = os.getenv("LOGIN_USERNAME")
 PASSWORD = os.getenv("APP_PSWD")
 print(PASSWORD)
 
-sender_email = "sadiqueiqbal28@gmail.com"
-rec_email = "sadiqueotherstuff@gmail.com"
+sender_email = input("Sender's Email: ")
+rec_email = input("Reciever's Email: ")
 subject = "Test E-Mail from Python"
 body = "Hello, This is a test email from Python"
 
